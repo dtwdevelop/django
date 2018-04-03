@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 	'deliver.apps.DeliverConfig',
     'client.apps.ClientConfig',
     'rest_framework',
-    'welcome',
+    # 'welcome',
 ]
 
 MIDDLEWARE = [

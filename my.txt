@@ -1,0 +1,2 @@
+Server hostname: django-psql-persistent-2-f85jh
+Database server: PostgreSQL (172.30.58.85:5432/default)

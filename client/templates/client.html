@@ -1,10 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
+{% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Delete me</title>
+  <meta charset="utf-8">
+  <title>Pacelam</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-<p>delete complete</p>
+  <app-root></app-root>
+
+  <script type="text/javascript" src="{% static '/dist/inline.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static '/dist/polyfills.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static '/dist/styles.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static '/dist/vendor.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static '/dist/main.bundle.js' %}"></script></body>
 </body>
 </html>
+
+
+

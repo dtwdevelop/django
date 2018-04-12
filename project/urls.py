@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url ,include
 from django.conf.urls.static import static
 from django.contrib import admin
-from client.views import ClientList,  ClientDetails ,ImagesList
+from client.views import ClientList,  ClientDetails ,ImagesList, app
 from rest_framework.urlpatterns import format_suffix_patterns
 from .settings import MEDIA_ROOT,MEDIA_URL
 from django.conf import settings
@@ -26,6 +26,7 @@ from django.conf import settings
 
 
 urlpatterns = [
+    url(r'', app),
     url(r'^client/$',ClientList.as_view(),name='client'),
     url(r'^client/(?P<pk>[0-9]+)/$',ClientDetails.as_view()),
     url(r'photos/',ImagesList.as_view(),name='image'),

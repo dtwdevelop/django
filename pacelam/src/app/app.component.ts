@@ -7,7 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  hello:any ="Under construction";
-  public constructor(){
-  }
 }

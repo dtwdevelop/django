@@ -1,10 +1,10 @@
-import { PacelamPage } from './app.po';
+import { AppPage } from './app.po';
 
 describe('pacelam App', () => {
-  let page: PacelamPage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new PacelamPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {

@@ -14,14 +14,7 @@ import 'rxjs/add/operator/map';
 export class ModalComponent implements OnInit {
   @Output() onClose = new EventEmitter<boolean>();
   clientForm :FormGroup
-  // clientForm = new FormGroup({
-  //   username: new FormControl(),
-  //   password: new FormControl(),
-  //   email: new FormControl(),
-  //   first_name: new FormControl(),
-  //   last_name: new FormControl(),
-  //   password_r: new FormControl()
-  // });
+
   constructor(private form:FormBuilder ,private api:ApiService){
    this.createForm()
 

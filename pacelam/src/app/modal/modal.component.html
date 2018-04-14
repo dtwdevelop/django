@@ -6,25 +6,40 @@
     </button>
   </div>
   <div class="modal-body">
-   <form>
+
+   <form [formGroup]="clientForm">
+     <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="text" formControlName="username" class="form-control" id="username"  placeholder="Enter username">
+       <span *ngIf="clientForm.controls['username'].hasError('required') ">Last username is required</span>
+
+  </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+           <span *ngIf="clientForm.controls['email'].hasError('required') ">Last email is required</span>
+
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password">
+           <span *ngIf="clientForm.controls['password'].hasError('required') ">Last password is required</span>
+
   </div>
      <div class="form-group">
     <label for="exampleInputPassword1">Repeat Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat">
+    <input type="password" formControlName="password_r" class="form-control" id="password_r" placeholder="Repeat">
+       <span *ngIf="clientForm.controls['password_r'].hasError('required') ">Last password repeat is required</span>
+
   </div>
   <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" formControlName="agree" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Agree  rules</label>
+    <span *ngIf="clientForm.controls['agree'].hasError('required') ">Last agree is required</span>
+
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" (click)="Submit($event)" class="btn btn-primary">Submit</button>
 </form>
   </div>
   <div class="modal-footer">

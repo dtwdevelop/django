@@ -10,27 +10,24 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
 
-  createUser(data=null):Observable<Client>{
-
+  createUser(datas=null):Observable<Client>{
     let user:any  =  {
      "user": {
 
-        "username" : "adminsss",
-        "password": "demo777",
-        "first_name": "",
-        "last_name": "",
-        "email": "dtwdevelop2@gmail.com",
+        "username" : datas.username,
+        "password": datas.password,
+        "first_name": datas.first_name,
+        "last_name": datas.last_name,
+        "email": datas.email,
 
 
     },
-     "name" : "Vladimir"
-
-}
+     "name" : datas.username
+    }
   const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
     // if not user.id wrong
-
     let  url:string  ="http://localhost:8000/client/"
     return this.http.post(url,user,httpOptions).pipe(tap(
      data =>console.log(data),

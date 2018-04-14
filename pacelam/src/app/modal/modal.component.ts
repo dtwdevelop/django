@@ -42,7 +42,7 @@ export class ModalComponent implements OnInit {
     })
   }
   Submit(){
-    if(this.clientForm.status == "VALID"){
+    if(this.clientForm.valid){
        this.api.createUser(this.clientForm.value).subscribe(data=>{console.log(data)})
 
       console.log("Form sent")

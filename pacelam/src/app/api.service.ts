@@ -13,15 +13,12 @@ export class ApiService {
   createUser(datas=null):Observable<Client>{
     let user:any  =  {
      "user": {
-
-        "username" : datas.username,
+       "username" : datas.username,
         "password": datas.password,
         "first_name": datas.first_name,
         "last_name": datas.last_name,
         "email": datas.email,
-
-
-    },
+     },
      "name" : datas.username
     }
   const httpOptions = {

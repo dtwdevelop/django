@@ -12,6 +12,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule} from "@angular/forms";
 import {ApiService} from "./api.service";
+import { LoginmodalComponent } from './loginmodal/loginmodal.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {ApiService} from "./api.service";
     MapComponent,
     LoginComponent,
     ModalComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    LoginmodalComponent
   ],
   imports: [
     BrowserModule,

@@ -57,8 +57,8 @@ class Client(models.Model):
     collect_address = models.CharField(max_length=255,null=True)
     type_account = models.IntegerField(choices=account_types,null=True)
     status = models.IntegerField(default=1)
-    created = models.DateField('created',null=True)
-    pub_date = models.DateField('date published')
+    created = models.DateTimeField('created',null=True)
+    pub_date = models.DateTimeField('date published',null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE,null=True)
     photo =  models.ForeignKey(Image, on_delete=models.CASCADE,null=True,verbose_name='photo')
 

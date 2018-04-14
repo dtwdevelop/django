@@ -3,13 +3,19 @@ from .models import Client, Image
 from django.contrib.auth.models import User
 from django.utils import timezone
 import logging
+from django.contrib.auth.hashers import make_password
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level = logging.DEBUG,
+    format = '%(name)s %(levelname)s %(message)s',
+)
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         # fields = ('name,email',)
-        exclude = ('password', 'groups', 'user_permissions', 'is_staff','username','last_login','is_active','is_superuser')
+        exclude = ('groups', 'user_permissions', 'is_staff','last_login','is_active','is_superuser')
 
 class ClientSerializer(serializers.ModelSerializer):
     user = UserSerializer()
@@ -20,6 +26,8 @@ class ClientSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         user_data = validated_data.pop('user')
+        user_data["password"] = make_password(user_data["password"])
+        logger.info(user_data)
         user = User.objects.create(**user_data)
         client = Client.objects.create(user=user, **validated_data)
         return client

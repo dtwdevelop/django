@@ -6,6 +6,8 @@ import { PaymentComponent } from './payment/payment.component';
 import { StatusDirective } from './status.directive';
 import { MapComponent } from './map/map.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
+import { ModalComponent } from './modal/modal.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ClientComponent,
     PaymentComponent,
     StatusDirective,
-    MapComponent
+    MapComponent,
+    LoginComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

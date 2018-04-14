@@ -1,0 +1,28 @@
+<section class="clearfix align-middle ">
+<ng-template #content let-c="close" let-d="dismiss">
+<app-modal (onClose)="onClose($event)"></app-modal>
+</ng-template>
+  <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src=".../100px200/" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Customer</h5>
+      <p class="card-text">Start send </p>
+
+       <a href="#" class="btn btn-primary" (click)="open(content)">Register</a>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src=".../100px200/" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Delivery</h5>
+
+      <p class="card-text"><small class="text-muted">Easy get money</small></p>
+       <a href="#" class="btn btn-primary" (click)="open(content)">Register</a>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+

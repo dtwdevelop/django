@@ -8,6 +8,7 @@ import { MapComponent } from './map/map.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
 import { ModalComponent } from './modal/modal.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ModalComponent } from './modal/modal.component';
     StatusDirective,
     MapComponent,
     LoginComponent,
-    ModalComponent
+    ModalComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

@@ -26,7 +26,7 @@ from django.conf import settings
 
 
 urlpatterns = [
-    url(r'', app),
+    url(r'^$', app),
     url(r'^client/$',ClientList.as_view(),name='client'),
     url(r'^client/(?P<pk>[0-9]+)/$',ClientDetails.as_view()),
     url(r'photos/',ImagesList.as_view(),name='image'),

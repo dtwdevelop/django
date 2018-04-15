@@ -22,7 +22,9 @@
            <span *ngIf="formLogin.controls['password'].hasError('required') ">Last password is required</span>
 
   </div>
+
      <button type="submit" (click)="Submit($event)" class="btn btn-primary">Login</button>
+      <a href="#" class="btn btn-default" (click)="open(content)">Forgot password</a>
 </form>
   </div>
   <div class="modal-footer">

@@ -1,7 +1,6 @@
 import { Component ,Output } from '@angular/core';
 import {NgbModal,NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
-
-
+import {ModalService} from "./modal.service";
 
 @Component({
   selector: 'app-root',
@@ -10,25 +9,13 @@ import {NgbModal,NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
 })
 export class AppComponent {
   title = 'app';
-   modalReference:NgbModalRef
-
-
- constructor(private modalService:NgbModal) {}
-  open(content) {
-
-     this.modalReference  = this.modalService.open(content);
-     this.modalReference.result.then((result) => {
-
-    }, (reason) => {
-
-    });
+   constructor(private modal:ModalService) {
+    }
+    open(content) {
+    this.modal.open(content)
   }
   onClose(event){
 
-    this.modalReference.close()
+   this.modal.onClose(event)
   }
-
-
-
-
 }

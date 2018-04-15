@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule} from "@angular/forms";
 import {ApiService} from "./api.service";
 import { LoginmodalComponent } from './loginmodal/loginmodal.component';
+import { ProfileComponent } from './profile/profile.component';
+import {ModalService} from "./modal.service";
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { LoginmodalComponent } from './loginmodal/loginmodal.component';
     LoginComponent,
     ModalComponent,
     WelcomeComponent,
-    LoginmodalComponent
+    LoginmodalComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { LoginmodalComponent } from './loginmodal/loginmodal.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,7 +13,7 @@
         <a class="nav-link" href="#" (click)="open(loginform)">Login</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="#">Profile</a>
+        <a class="nav-link" routerLink="/profile" >Profile</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="">Contact</a>
@@ -26,14 +26,8 @@
 <app-loginmodal (onClose)="onClose($event)"></app-loginmodal>
 </ng-template>
 <div class="container">
-  <div class="jumbotron">
-  <h1 class="display-4">Be ready!</h1>
-  <p class="lead">Easy send your cargo</p>
-  <hr class="my-4">
-  <p>Help peoples and get many</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-</div>
-  <app-login></app-login>
+
+  <router-outlet></router-outlet>
 </div>
 <nav class="navbar fixed-bottom navbar-light bg-dark">
 

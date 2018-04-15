@@ -15,6 +15,7 @@ import {ApiService} from "./api.service";
 import { LoginmodalComponent } from './loginmodal/loginmodal.component';
 import { ProfileComponent } from './profile/profile.component';
 import {ModalService} from "./modal.service";
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import {ModalService} from "./modal.service";
     BrowserModule,
     NgbModule.forRoot(),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [ApiService, ModalService],
   bootstrap: [AppComponent]

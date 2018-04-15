@@ -1,3 +1,27 @@
-<p>
-  map works!
-</p>
+<section>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="text" placeholder="From">
+      </div>
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="text" placeholder="To">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+   <ul class="list-group">
+  <li class="list-group-item">Active</li>
+  <li class="list-group-item">Status</li>
+  <li class="list-group-item">History</li>
+
+</ul>
+
+    </div>
+    <div class="col-md-6">
+      <agm-map [latitude]="lat" [longitude]="lng"  [zoom]="3"  [minZoom]="10" [disableDefaultUI]="false" >
+      </agm-map>
+    </div>
+  </div>
+</section>

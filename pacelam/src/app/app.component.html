@@ -1,19 +1,22 @@
+ <header>
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-primary">
   <a class="navbar-brand" href="#">Pacelam</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" (click)="toggleCollapse()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
+    <span [hidden]="collapse=='open'" class="fa fa-bars fa-lg"></span>
+   <span [hidden]="collapse=='closed'" class="fa fa-times fa-lg"></span>
   </button>
 
-  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+  <div class="collapse navbar-collapse "   [@collapse]="collapse2"  id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" routerLink="/">News <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link btn"  (click)="open(loginform)">Login</a>
+        <a class="nav-link "  (click)="open(loginform)">Login</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" routerLink="/profile" >Profile</a>
+        <a class="nav-link" routerLink="/send" >Send</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="">Contact</a>
@@ -21,18 +24,22 @@
     </ul>
 
   </div>
+
 </nav>
+ </header>
 <ng-template #loginform let-c="close" let-d="dismiss">
 <app-loginmodal (onClose)="onClose($event)"></app-loginmodal>
 </ng-template>
-<div class="container">
+ <main role="main" class="container">
 
-  <router-outlet></router-outlet>
-</div>
-<nav class="navbar fixed-bottom navbar-light bg-dark">
+    <router-outlet></router-outlet>
+ </main>
 
-
-
+<footer>
+  <nav class="navbar fixed-bottom navbar-light bg-dark">
 </nav>
+
+</footer>
+
 
 

@@ -16,6 +16,8 @@ import { LoginmodalComponent } from './loginmodal/loginmodal.component';
 import { ProfileComponent } from './profile/profile.component';
 import {ModalService} from "./modal.service";
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -36,7 +38,12 @@ import { AppRoutingModule } from './app-routing.module';
     NgbModule.forRoot(),
     HttpClientModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+
+     AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC3fiie1AoGkZxnfh4kdgnr0V2rS2BA2pY'
+    }),
   ],
   providers: [ApiService, ModalService],
   bootstrap: [AppComponent]

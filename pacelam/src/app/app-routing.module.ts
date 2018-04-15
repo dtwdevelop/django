@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import {ProfileComponent} from './profile/profile.component'
 import {LoginComponent} from "./login/login.component";
+import {MapComponent} from "./map/map.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'send', component: MapComponent },
    { path: 'login', component: LoginComponent }
 
 ];

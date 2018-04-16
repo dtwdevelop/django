@@ -1,14 +1,19 @@
 <section>
+
   <div class="row">
     <div class="col-md-5">
+
       <div class="form-group">
-        <input class="form-control form-control-sm" type="text" placeholder="From">
+        <input auto-complete type="text" (keyup)="From($event)" [(ngModel)]="from" [source]="sourceFrom" class="form-control form-control-sm"  placeholder="From">
       </div>
+
       <div class="form-group">
-        <input class="form-control form-control-sm" type="text" placeholder="To">
+        <input auto-complete type="text" (keyup)="From($event)" [(ngModel)]="to" [source]="sourceFrom" class="form-control form-control-sm" type="text" placeholder="To">
       </div>
+   </div>
     </div>
-  </div>
+
+
   <div class="row">
     <div class="col-md-3">
    <ul class="list-group">

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders,} from '@angular/common/http';
+import {RequestOptions, Request, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import {catchError, retry, tap} from 'rxjs/operators';
@@ -34,6 +35,22 @@ export class ApiService {
 
   Error  (data):any{
     console.log(data)
+
+  }
+  findCity(city:string):any{
+
+      const httpOptions = {
+          headers: new HttpHeaders({
+              'Content-Type':  'application/json',
+              // 'Access-Control-Allow-Origin' : 'https://googleapis.com',
+              // 'Access-Control-Allow-Credentials' :' true',
+              // 'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
+          })
+      };
+       let requestOptions = new RequestOptions({ headers:null, withCredentials: true });
+      let  url:string ="https://maps.googleapis.com/maps/api/place/autocomplete/json?input="+city+"&language=en&key=AIzaSyC3fiie1AoGkZxnfh4kdgnr0V2rS2BA2pY";
+      return this.http.get(url,httpOptions).map(res => res) ;
+
 
   }
 

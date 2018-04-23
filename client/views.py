@@ -7,7 +7,8 @@ from rest_framework import permissions
 from django.shortcuts import render_to_response
 
 def app(request):
-    return render_to_response("client.html");
+    response = render_to_response("client.html",{});
+    return response
 
 class ClientList(generics.ListCreateAPIView):
     queryset = Client.objects.all()

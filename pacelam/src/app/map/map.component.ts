@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ApiService} from "../api.service";
 
 @Component({
   selector: 'app-map',
@@ -10,12 +11,26 @@ export class MapComponent implements OnInit {
   lng: number = -0.12574;
   from:string;
   to:string;
-  sourceFrom:any[]=["place","place2"];
+  sourceFrom:any[]=[];
 
-  constructor() { }
+  constructor(private api:ApiService) { }
 
+  From(event){
+     if(event.target.value.length > 1){
+
+      this.api.findCity(event.target.value).subscribe(data=> {
+
+        data['predictions'].map(val=>{
+
+          this.sourceFrom.push(val.description)
+
+        })
+
+      });
+    }
+  }
   ngOnInit() {
   }
-   From(ev){}
+
 
 }

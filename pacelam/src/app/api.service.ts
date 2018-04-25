@@ -42,13 +42,13 @@ export class ApiService {
       const httpOptions = {
           headers: new HttpHeaders({
               'Content-Type':  'application/json',
-              // 'Access-Control-Allow-Origin' : 'https://googleapis.com',
-              // 'Access-Control-Allow-Credentials' :' true',
+              // 'Access-Control-Allow-Origin' : '*',
+              // 'Access-Control-Allow-Credentials' :' false',
               // 'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
+            // 'Origin' : 'http://www.someorigin.com'
           })
       };
-       let requestOptions = new RequestOptions({ headers:null, withCredentials: true });
-      let  url:string ="https://maps.googleapis.com/maps/api/place/autocomplete/json?input="+city+"&language=en&key=AIzaSyC3fiie1AoGkZxnfh4kdgnr0V2rS2BA2pY";
+      let  url:string ="http://localhost:8000/map/?city="+city+"";
       return this.http.get(url,httpOptions).map(res => res) ;
 
 

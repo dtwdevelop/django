@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url ,include
 from django.conf.urls.static import static
 from django.contrib import admin
-from client.views import ClientList,  ClientDetails ,ImagesList, app
+from client.views import ClientList,  ClientDetails ,ImagesList, app ,gmap
 from rest_framework.urlpatterns import format_suffix_patterns
 from .settings import MEDIA_ROOT,MEDIA_URL
 from django.conf import settings
@@ -31,7 +31,8 @@ urlpatterns = [
     url(r'^client/(?P<pk>[0-9]+)/$',ClientDetails.as_view()),
     url(r'photos/',ImagesList.as_view(),name='image'),
     url(r'^admin/', admin.site.urls),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^map/',gmap)
 
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)

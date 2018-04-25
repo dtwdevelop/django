@@ -16,7 +16,7 @@ export class MapComponent implements OnInit {
   constructor(private api:ApiService) { }
 
   From(event){
-     if(event.target.value.length > 1){
+     if(event.target.value.length > 4){
 
       this.api.findCity(event.target.value).subscribe(data=> {
 

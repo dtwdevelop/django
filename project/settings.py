@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,18 +49,20 @@ INSTALLED_APPS = [
 	'deliver.apps.DeliverConfig',
     'client.apps.ClientConfig',
     'rest_framework',
+
     # 'welcome',
 ]
 
 MIDDLEWARE = [
-    'client.middleware.cors.CORSMiddleware',
+     'client.middleware.cors.CORSMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
@@ -148,3 +151,14 @@ ROOT_URL= 'http://localhost:8000/'
 
 
 INTERNAL_IPS = ['127.0.0.1']
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_WHITELIST = (
+    'google.com',
+    'localhost:8000',
+    'maps.googleapis.com',
+    'googleapis.com'
+
+)

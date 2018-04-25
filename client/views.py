@@ -16,9 +16,9 @@ def app(request):
 
 def gmap(request):
     try:
-        # city =request.GET['city']
+        city =request.GET['city']
         data=""
-        city = 'London'
+        # city = 'London'
         with url.urlopen('https://maps.googleapis.com/maps/api/place/autocomplete/json?input={0}&language=en&key=AIzaSyC3fiie1AoGkZxnfh4kdgnr0V2rS2BA2pY'.format(city)) as t:
            data = t.read()
 

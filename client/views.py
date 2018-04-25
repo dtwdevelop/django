@@ -6,10 +6,9 @@ from rest_framework import generics
 from rest_framework import permissions
 from django.shortcuts import render_to_response
 import  urllib.request as url
-from django.core.serializers import serialize
-from rest_framework.response import Response
 from django.http import JsonResponse
-import json
+from project.settings import gMap
+
 def app(request):
     response = render_to_response("client.html",{});
     return response
@@ -17,9 +16,9 @@ def app(request):
 def gmap(request):
     try:
         city =request.GET['city']
-        data=""
+        data = ""
         # city = 'London'
-        with url.urlopen('https://maps.googleapis.com/maps/api/place/autocomplete/json?input={0}&language=en&key=AIzaSyC3fiie1AoGkZxnfh4kdgnr0V2rS2BA2pY'.format(city)) as t:
+        with url.urlopen('https://maps.googleapis.com/maps/api/place/autocomplete/json?input={0}&language=en&key={1}'.format(city,gMap)) as t:
            data = t.read()
 
         return JsonResponse(data.decode('utf-8','slashescape'),safe=False)

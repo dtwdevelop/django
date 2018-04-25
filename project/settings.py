@@ -162,3 +162,4 @@ CORS_ORIGIN_WHITELIST = (
     'googleapis.com'
 
 )
+gMap = 'AIzaSyC3fiie1AoGkZxnfh4kdgnr0V2rS2BA2pY'

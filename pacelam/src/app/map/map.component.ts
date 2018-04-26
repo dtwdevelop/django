@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../api.service";
 import {FormBuilder, FormGroup,Validators} from '@angular/forms';
+import index from "@angular/cli/lib/cli";
 
 
 @Component({
@@ -15,7 +16,10 @@ export class MapComponent implements OnInit {
   to:string;
   status:boolean =false;
   sourceFrom:any[]=[];
-   formAuto:FormGroup;
+  formAuto:FormGroup;
+  markers:any = []
+
+  total:number =0;
 
   constructor(private api:ApiService,private fb:FormBuilder) {
     this.createForm()
@@ -53,7 +57,20 @@ export class MapComponent implements OnInit {
         console.log("continue")
       }
   }
+  getPostiton(event){
+
+   if(this.total < 2){
+      this.markers.push({
+          'lat': event.coords.lat,
+           'lng': event.coords.lng
+      })
+      this.total ++
+   }
+
+
+  }
   ngOnInit() {
+
   }
 
 

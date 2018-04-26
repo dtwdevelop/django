@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5600ca45-47a3-4d2d-8a9f-dc1e8dc38808" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my.txt" beforeDir="false" afterPath="$PROJECT_DIR$/my.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pacelam/src/app/map/map.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/pacelam/src/app/map/map.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pacelam/src/app/map/map.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pacelam/src/app/map/map.component.ts" afterDir="false" />
     </list>
@@ -22,8 +21,8 @@
       <file leaf-file-name="map.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pacelam/src/app/map/map.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
+            <state relative-caret-position="323">
+              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -31,22 +30,10 @@
       <file leaf-file-name="map.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pacelam/src/app/map/map.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="3" lean-forward="true" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+            <state relative-caret-position="255">
+              <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modal.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pacelam/src/app/modal/modal.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="49" column="3" selection-start-line="46" selection-start-column="2" selection-end-line="49" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#70#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,7 +113,7 @@
       <path value="$PROJECT_DIR$/pacelam/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="320" />
     <option name="y" value="100" />
     <option name="width" value="1400" />
@@ -242,9 +229,9 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32909605" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32909605" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31779662" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.259887" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.2080537" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.2080537" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -558,6 +545,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" selection-start-line="10" selection-end-line="11" />
+          <folding>
+            <element signature="e#93#126#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -627,8 +617,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pacelam/src/app/map/map.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="3" lean-forward="true" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+        <state relative-caret-position="255">
+          <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -637,8 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pacelam/src/app/map/map.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
+        <state relative-caret-position="323">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
         </state>
       </provider>
     </entry>

@@ -31,7 +31,10 @@
 
     </div>
     <div class="col-md-6">
-      <agm-map [latitude]="lat" [longitude]="lng"  [zoom]="3"  [minZoom]="10" [disableDefaultUI]="false" >
+      <agm-map [latitude]="lat"  [longitude]="lng" (mapClick)="getPostiton($event)"   [zoom]="3"  [minZoom]="10" [disableDefaultUI]="false" >
+
+          <agm-marker *ngFor="let marker of markers"  [latitude]="marker.lat" [longitude]="marker.lng" ></agm-marker>
+
       </agm-map>
     </div>
   </div>

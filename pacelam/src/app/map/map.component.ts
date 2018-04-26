@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../api.service";
+import {FormBuilder, FormGroup,Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-map',
@@ -11,12 +13,25 @@ export class MapComponent implements OnInit {
   lng: number = -0.12574;
   from:string;
   to:string;
+  status:boolean =false;
   sourceFrom:any[]=[];
+   formAuto:FormGroup;
 
-  constructor(private api:ApiService) { }
+  constructor(private api:ApiService,private fb:FormBuilder) {
+    this.createForm()
+  }
+
+  createForm(){
+     this.formAuto =this.fb.group(
+        {
+        from:['',Validators.required],
+        to:['',Validators.required]
+      }
+     )
+  }
 
   From(event){
-     if(event.target.value.length > 3){
+     if(event.target.value.length > 2){
 
       this.api.findCity(event.target.value).subscribe(data=> {
         data = JSON.parse(data)
@@ -28,7 +43,15 @@ export class MapComponent implements OnInit {
         })
 
       });
+
     }
+
+  }
+  Next(){
+     if(this.formAuto.valid){
+        this.status =true;
+        console.log("continue")
+      }
   }
   ngOnInit() {
   }

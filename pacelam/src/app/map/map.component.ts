@@ -28,8 +28,10 @@ export class MapComponent implements OnInit {
   createForm(){
      this.formAuto =this.fb.group(
         {
-        from:['',Validators.required],
-        to:['',Validators.required]
+          from:['',Validators.required],
+          to:['',Validators.required],
+          date :[''],
+          phone :[''],
       }
      )
   }
@@ -71,6 +73,7 @@ export class MapComponent implements OnInit {
      this.from = "";
      this.to ="";
      this.markers =[]
+     this.status =false
    }
 
   ngOnInit() {

@@ -32,6 +32,7 @@ export class MapComponent implements OnInit {
           to:['',Validators.required],
           date :[''],
           phone :[''],
+          text : ['']
       }
      )
   }

@@ -1,7 +1,15 @@
 <section>
 
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-10">
+        <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Status</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item">Active</button>
+        <button class="dropdown-item">Delivered</button>
+        <button class="dropdown-item">History</button>
+      </div>
+  </div>
 <form [formGroup]="formAuto">
   <ngb-tabset>
   <ngb-tab title="Start">
@@ -17,7 +25,11 @@
       </div>
        <button class="btn btn-small" (click)="delete()"><i class="icon">Clear</i></button>
 
+ <agm-map [latitude]="lat"  [longitude]="lng" (mapClick)="getPostiton($event)"   [zoom]="3"  [minZoom]="10" [disableDefaultUI]="false" >
 
+          <agm-marker *ngFor="let marker of markers"  [latitude]="marker.lat" [longitude]="marker.lng" ></agm-marker>
+
+      </agm-map>
     </ng-template>
   </ngb-tab>
      <ngb-tab title="Details" [disabled]="status">
@@ -65,19 +77,8 @@
 
     </div>
     <div class="col-md-10">
-       <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Status</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button class="dropdown-item">Active</button>
-        <button class="dropdown-item">Delivered</button>
-        <button class="dropdown-item">History</button>
-      </div>
-  </div>
-      <agm-map [latitude]="lat"  [longitude]="lng" (mapClick)="getPostiton($event)"   [zoom]="3"  [minZoom]="10" [disableDefaultUI]="false" >
 
-          <agm-marker *ngFor="let marker of markers"  [latitude]="marker.lat" [longitude]="marker.lng" ></agm-marker>
 
-      </agm-map>
     </div>
 
   </div>

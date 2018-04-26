@@ -14,7 +14,7 @@ export class MapComponent implements OnInit {
   lng: number = -0.12574;
   from:string;
   to:string;
-  status:boolean =false;
+  status:boolean =true;
   sourceFrom:any[]=[];
   formAuto:FormGroup;
   markers:any = []
@@ -55,7 +55,7 @@ export class MapComponent implements OnInit {
   }
   Next(){
      if(this.formAuto.valid){
-        this.status =true;
+        this.status =false;
         console.log("continue")
       }
   }
@@ -73,7 +73,7 @@ export class MapComponent implements OnInit {
      this.from = "";
      this.to ="";
      this.markers =[]
-     this.status =false
+     this.status = true
    }
 
   ngOnInit() {

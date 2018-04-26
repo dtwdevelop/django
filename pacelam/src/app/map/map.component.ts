@@ -19,7 +19,7 @@ export class MapComponent implements OnInit {
   formAuto:FormGroup;
   markers:any = []
 
-  total:number =0;
+
 
   constructor(private api:ApiService,private fb:FormBuilder) {
     this.createForm()
@@ -59,17 +59,18 @@ export class MapComponent implements OnInit {
   }
   getPostiton(event){
 
-   if(this.total < 2){
+   if(this.markers.length < 2){
       this.markers.push({
           'lat': event.coords.lat,
            'lng': event.coords.lng
       })
-      this.total ++
+
    }
    }
    delete(){
      this.from = "";
      this.to ="";
+     this.markers =[]
    }
 
   ngOnInit() {

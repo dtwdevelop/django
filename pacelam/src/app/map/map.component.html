@@ -5,11 +5,14 @@
 <form [formGroup]="formAuto">
       <div class="form-group">
         <input formControlName="from" placement="bottom" ngbTooltip="Delivery from" auto-complete type="text" id="from" (valueChanged)="Next()"  (keyup)="From($event)" [(ngModel)]="from" [source]="sourceFrom" class="form-control form-control-sm"  placeholder="From">
+       <button class="btn btn-small" (click)="delete()"><i class="icon">x</i></button>
       </div>
 
       <div class="form-group">
         <input formControlName="to" placement="bottom" ngbTooltip="Delivery to" id="to" auto-complete type="text" (valueChanged)="Next()"  (keyup)="From($event)" [(ngModel)]="to" [source]="sourceFrom" class="form-control form-control-sm" type="text" placeholder="To">
+       <button class="btn btn-small" (click)="delete()"><i class="icon">x</i></button>
       </div>
+
 </form>
       <div *ngIf="status">
               Continue

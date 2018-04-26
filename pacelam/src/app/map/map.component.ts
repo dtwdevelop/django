@@ -66,9 +66,12 @@ export class MapComponent implements OnInit {
       })
       this.total ++
    }
+   }
+   delete(){
+     this.from = "";
+     this.to ="";
+   }
 
-
-  }
   ngOnInit() {
 
   }

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import {ApiService} from "../api.service";
 import {FormBuilder, FormGroup,Validators} from '@angular/forms';
-import index from "@angular/cli/lib/cli";
+import {Ng4xfileuploadComponent} from 'ng4x-fileupload'
 
 
 @Component({
@@ -14,13 +14,18 @@ export class MapComponent implements OnInit {
   lng: number = -0.12574;
   from:string;
   to:string;
-  status:boolean =true;
+  status:boolean = false;
   sourceFrom:any[]=[];
   formAuto:FormGroup;
   markers:any = []
+  total:number  =10;
+   @ViewChild('ng4fileupload') ng4xfileupload:Ng4xfileuploadComponent;
 
 
 
+  ngOnInit() {
+
+  }
   constructor(private api:ApiService,private fb:FormBuilder) {
     this.createForm()
   }
@@ -30,9 +35,10 @@ export class MapComponent implements OnInit {
         {
           from:['',Validators.required],
           to:['',Validators.required],
-          date :[''],
-          phone :[''],
-          text : ['']
+          date :[' '],
+          phone :[' '],
+          text : [' '],
+
       }
      )
   }
@@ -77,9 +83,7 @@ export class MapComponent implements OnInit {
      this.status = true
    }
 
-  ngOnInit() {
 
-  }
 
 
 }

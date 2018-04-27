@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgmCoreModule } from '@agm/core';
 import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
+import {Ng4xFileuploadModule} from 'ng4x-fileupload'
 
 
 
@@ -38,16 +39,18 @@ import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
   ],
   imports: [
     BrowserModule,
-     FormsModule,
+    FormsModule,
     NgbModule.forRoot(),
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    Ng4xFileuploadModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyC3fiie1AoGkZxnfh4kdgnr0V2rS2BA2pY'
     }),
      Ng2AutoCompleteModule,
+
   ],
   providers: [ApiService, ModalService],
   bootstrap: [AppComponent]

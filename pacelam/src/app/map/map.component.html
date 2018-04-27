@@ -1,5 +1,4 @@
 <section>
-
   <div class="row">
     <div class="col-md-10">
         <div ngbDropdown class="d-inline-block">
@@ -10,6 +9,7 @@
         <button class="dropdown-item">History</button>
       </div>
   </div>
+
 <form [formGroup]="formAuto">
   <ngb-tabset>
   <ngb-tab title="Start">
@@ -32,6 +32,7 @@
       </agm-map>
     </ng-template>
   </ngb-tab>
+
      <ngb-tab title="Details" [disabled]="status">
     <ng-template ngbTabContent>
       <div class="form-group">
@@ -49,23 +50,33 @@
   </div>
             <div class="form-group">
             <label for="phone">Phone</label>
-           <input type="text" formControlName="phone" class="form-control" id="phone"  placeholder="phone">
+           <input type="text" formControlName="phone"  class="form-control" id="phone"  placeholder="phone" >
+            </div>
+        <div class="form-group">
+            <label for="file">Photos</label>
+          <ng4x-fileupload #ng4fileupload [isMultiple]="true"></ng4x-fileupload>
+
             </div>
 
             <div class="form-group">
             <label for="text">About cargo</label>
               <textarea formControlName="text" name="text" id="text" class="form-control" ></textarea>
+
             </div>
+
+
           <div class="form-group">
              <button class="btn">Next</button>
           </div>
 
 
     </ng-template>
+
   </ngb-tab>
+
   <ngb-tab title="Payment">
     <ng-template ngbTabContent>
-
+<p>Payment</p>
     </ng-template>
   </ngb-tab>
 </ngb-tabset>
@@ -74,17 +85,4 @@
 
    </div>
     </div>
-
-
-  <div class="row">
-    <div class="col-md-2">
-
-
-    </div>
-    <div class="col-md-10">
-
-
-    </div>
-
-  </div>
 </section>
